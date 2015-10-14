@@ -1,14 +1,14 @@
 {
-  "name": "jsonify",
+  "name": "destringify",
   "version": "0.1.0",
-  "description": "Convert objects string values to builtins",
+  "description": "Convert string values to builtins",
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers=coffee:coffee-script/register test.coffee"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alxarch/jsonify.git"
+    "url": "git+https://github.com/alxarch/destringify.git"
   },
   "keywords": [
     "json",
@@ -17,9 +17,9 @@
   "author": "Alexandros Sigalas <alxarch@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alxarch/jsonify/issues"
+    "url": "https://github.com/alxarch/destringify/issues"
   },
-  "homepage": "https://github.com/alxarch/jsonify#readme",
+  "homepage": "https://github.com/alxarch/destringify#readme",
   "devDependencies": {
     "coffee-script": "^1.10.0",
     "mocha": "^2.3.3"

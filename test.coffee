@@ -1,5 +1,5 @@
-describe "jsonify", ->
-	jsonify = require "."
+describe "destringify", ->
+	destringify = require "."
 	assert = require "assert"
 	input =
 		foo: "bar"
@@ -16,7 +16,7 @@ describe "jsonify", ->
 				bar: "foo"
 				foo: 4
 				baz: null
-		assert.deepEqual jsonify(input), output, "Converts all builtins"
+		assert.deepEqual destringify(input), output, "Converts all builtins"
 
 	it "filters keys to process using array match", ->
 		output =
@@ -26,7 +26,7 @@ describe "jsonify", ->
 				bar: "foo"
 				foo: "4"
 				baz: null
-		assert.deepEqual jsonify(input, ["bar", "baz"]), output, "Converts all builtins"
+		assert.deepEqual destringify(input, ["bar", "baz"]), output, "Converts all builtins"
 	
 	it "filters keys to process using string match", ->
 		output =
@@ -36,7 +36,7 @@ describe "jsonify", ->
 				bar: "foo"
 				foo: "4"
 				baz: null
-		assert.deepEqual jsonify(input, "baz"), output, "Converts all builtins"
+		assert.deepEqual destringify(input, "baz"), output, "Converts all builtins"
 
 	it "filters keys to process using regex match", ->
 		output =
@@ -46,7 +46,7 @@ describe "jsonify", ->
 				bar: "foo"
 				foo: "4"
 				baz: null
-		assert.deepEqual jsonify(input, /^ba/), output, "Converts targeted values"
+		assert.deepEqual destringify(input, /^ba/), output, "Converts targeted values"
 
 		
 	it "filters keys to process using function match", ->
@@ -68,13 +68,13 @@ describe "jsonify", ->
 					assert no
 			key is "baz"
 
-		assert.deepEqual jsonify(input, filter), output, "Converts targeted values"
+		assert.deepEqual destringify(input, filter), output, "Converts targeted values"
 
 	it "Converts loose values correctly", ->
-		assert.ok (jsonify "true") is true, "true"
-		assert.ok (jsonify "false") is false, "false"
-		assert.ok (jsonify "null") is null, "null"
-		assert.ok (jsonify "undefined") is undefined, "undefined"
-		assert.ok (jsonify "4") is 4, "number"
-		assert.ok (jsonify "4.2") is 4.2, "number (float)"
+		assert.ok (destringify "true") is true, "true"
+		assert.ok (destringify "false") is false, "false"
+		assert.ok (destringify "null") is null, "null"
+		assert.ok (destringify "undefined") is undefined, "undefined"
+		assert.ok (destringify "4") is 4, "number"
+		assert.ok (destringify "4.2") is 4.2, "number (float)"
 
