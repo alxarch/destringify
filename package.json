@@ -1,0 +1,30 @@
+{
+  "name": "jsonify",
+  "version": "0.1.0",
+  "description": "Convert objects string values to builtins",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers=coffee:coffee-script/register test.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alxarch/jsonify.git"
+  },
+  "keywords": [
+    "json",
+    "parse"
+  ],
+  "author": "Alexandros Sigalas <alxarch@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alxarch/jsonify/issues"
+  },
+  "homepage": "https://github.com/alxarch/jsonify#readme",
+  "devDependencies": {
+    "coffee-script": "^1.10.0",
+    "mocha": "^2.3.3"
+  },
+  "dependencies": {
+    "lodash": "^3.10.1"
+  }
+}
